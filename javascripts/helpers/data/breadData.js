@@ -32,8 +32,13 @@ const setSelectedBread = (breadId) => {
   console.log('selectedBreadId', selectedBreadId);
 };
 
+const getSelectedBread = () => {
+  const findBread = breads.find((x) => x.id === selectedBreadId)
+  return findBread;
+}
+
 const getBreads = () => {
   return breads;
 };
 
-export default { setSelectedBread, getBreads };
+export default { setSelectedBread, getBreads, getSelectedBread };
